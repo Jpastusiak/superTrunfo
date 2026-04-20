@@ -1,10 +1,10 @@
 # Super Trunfo
 
-Um jogo de cartas Super Trunfo implementado em linguagem C, onde jogadores comparam atributos de países/cidades para determinar o vencedor.
+Um jogo de cartas Super Trunfo implementado em linguagem C.
 
 ## Descrição
 
-Este projeto é uma implementação simples do jogo Super Trunfo, um jogo de cartas onde dois jogadores criam cartas com dados de países ou cidades e competem escolhendo atributos para comparação. O jogador que vencer em ambos os atributos escolhidos ganha a rodada.
+Este projeto é uma implementação simples do jogo Super Trunfo, um jogo de cartas onde dois jogadores criam cartas com dados de países e competem escolhendo atributos para comparação. O jogador que vencer em ambos os atributos escolhidos ganha.
 
 ## Atributos das Cartas
 
@@ -48,7 +48,7 @@ O programa segue uma estrutura sequencial clara:
 ### Operadores e Estruturas de Controle Utilizadas
 
 #### Operador Ternário
-O programa utiliza extensivamente o operador ternário (`? :`) para realizar comparações e atribuir valores booleanos:
+O programa utiliza o operador ternário (`? :`) para realizar comparações e atribuir valores booleanos:
 
 ```c
 comparacao1 = populacao1 > populacao2 ? 1 : 0;
@@ -76,7 +76,7 @@ switch(atributoEscolhido1) {
 
 Esta abordagem permite uma navegação hierárquica através das opções disponíveis, garantindo que o segundo atributo seja diferente do primeiro.
 
-#### Estruturas If-Else Aninhadas
+#### Estruturas If-Else Encadeadas
 Para determinar o resultado final, é utilizada uma estrutura `if-else`:
 
 ```c
@@ -89,13 +89,6 @@ if(resultado1 == 0) {
 }
 ```
 
-#### Operadores de Comparação Encadeados
-O programa emprega operadores de comparação (`>`, `<`, `==`) para avaliar os atributos. Para a densidade populacional, onde um valor menor é melhor, a lógica é invertida:
-
-```c
-comparacao2 = densidade1 < densidade2 ? 1 : 0;
-```
-
 #### Operadores Aritméticos
 São utilizados para cálculos automáticos:
 
@@ -106,41 +99,11 @@ pibPerCapita1 = (float) PIB1 / populacao1;
 
 ### Padrões de Design
 
-- **Separação de Responsabilidades**: Entrada, processamento e saída são claramente separados
+- **Separação de Responsabilidades**: Entrada, processamento e saída separados
 - **Validação de Entrada**: Uso de `default` nos switches para tratar opções inválidas
-- **Cálculos Transparente**: Atributos derivados são calculados automaticamente
+- **Cálculos Transparentes**: Atributos derivados são calculados automaticamente
 - **Interface Textual Simples**: Foco na lógica do jogo sem complexidades visuais
 
-## Exemplo de Uso
-
-```
-DADOS DA CARTA 1
-Digite o nome do país:
-Brasil
-Digite a quantidade da população:
-211000000
-Digite a area da Cidade:
-8514877
-Digite o PIB da Cidade:
-2000000000000
-Digite a quantidade de pontos turísticos:
-50
-
-DADOS DA CARTA 2
-Digite o nome do país:
-Argentina
-Digite a quantidade da população:
-45000000
-...
-```
-
-## Funcionalidades
-
-- Entrada interativa de dados das cartas
-- Cálculo automático de atributos secundários (Densidade e PIB per Capita)
-- Seleção de atributos para comparação
-- Validação de opções inválidas
-- Exibição detalhada das cartas e resultado final
 
 ## Estrutura do Código
 
@@ -148,19 +111,4 @@ Digite a quantidade da população:
 - Entrada de dados via `scanf()`
 - Cálculos automáticos para densidade e PIB per capita
 - Lógica de comparação usando switches aninhados
-- Saída formatada dos resultados
-
-## Limitações
-
-- Suporta apenas 2 jogadores
-- Entrada limitada a valores numéricos válidos
-- Não há persistência de dados entre execuções
-- Interface puramente textual
-
-## Autor
-
-Projeto desenvolvido como exercício de programação em C.
-
-## Licença
-
-Este projeto é de uso educacional e pode ser modificado livremente.
+- Saída formatada dos resultados (exibição detalhada das cartas e resultado final)
