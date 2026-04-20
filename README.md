@@ -35,15 +35,17 @@ Cada carta contém os seguintes atributos:
 
 ## Estrutura do Código e Operadores
 
-### Estrutura Geral do Programa
+### Estrutura do Código
 
 O programa segue uma estrutura sequencial clara:
 
 1. **Declaração de Variáveis**: Todas as variáveis são declaradas no início da função `main()`
-2. **Entrada de Dados**: Coleta interativa dos atributos das duas cartas
+1. **Função principal**: `main()`: Função principal que controla o fluxo do jogo
+2. **Entrada de Dados**: Coleta interativa dos atributos das duas cartas via `scanf()`
 3. **Cálculos Automáticos**: Computação da densidade populacional e PIB per capita
-4. **Seleção de Atributos**: Uso de estruturas de controle para escolher atributos de comparação
-5. **Exibição de Resultados**: Apresentação das cartas e determinação do vencedor
+4. **Seleção de Atributos**: Uso de estruturas de controle switch para escolher atributos de comparação
+5. **Exibição de Resultados**: Saída formatada dos resultados (Apresentação das cartas e determinação do vencedor)
+
 
 ### Operadores e Estruturas de Controle Utilizadas
 
@@ -104,11 +106,3 @@ pibPerCapita1 = (float) PIB1 / populacao1;
 - **Cálculos Transparentes**: Atributos derivados são calculados automaticamente
 - **Interface Textual Simples**: Foco na lógica do jogo sem complexidades visuais
 
-
-## Estrutura do Código
-
-- `main()`: Função principal que controla o fluxo do jogo
-- Entrada de dados via `scanf()`
-- Cálculos automáticos para densidade e PIB per capita
-- Lógica de comparação usando switches aninhados
-- Saída formatada dos resultados (exibição detalhada das cartas e resultado final)
